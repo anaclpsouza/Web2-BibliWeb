@@ -165,7 +165,7 @@ class LivroMongo {
     async qntFormato(Formato) {
         await conexao_bd()
         const colecao = bd().collection("livros")
-        const qtd = await colecao.count({ Formato: Formato })
+        const qtd = await colecao.count({ formato: Formato })
         return qtd
     }
 
